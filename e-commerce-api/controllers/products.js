@@ -16,18 +16,6 @@ const getSpecificProduct = async (req, res) => {
   res.status(StatusCodes.OK).json(product);
 };
 
-const createProduct = async (req, res) => {
-  res.send(`create a product`);
-};
-
-const deleteProduct = async (req, res) => {
-  res.send(`delete a product`);
-};
-
-const updateProduct = async (req, res) => {
-  res.send(`update a product`);
-};
-
 module.exports = {
   getAllProducts,
   getSpecificProduct,
