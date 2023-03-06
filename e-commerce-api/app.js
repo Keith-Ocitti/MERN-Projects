@@ -17,6 +17,7 @@ const authRoute = require("./routes/auth");
 
 // execute middleware
 app.use(express.json());
+app.use("/api/v1/updateProfile", authenticationMiddleware);
 app.use("/api/v1/", authRoute);
 app.use("/api/v1/", authenticationMiddleware, productRoute);
 app.use(errorMiddleware);
