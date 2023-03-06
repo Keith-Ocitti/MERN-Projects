@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const singleOrderSchema = new mongoose.Schema({
+const singleOrderSchema = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -24,28 +24,34 @@ const singleOrderSchema = new mongoose.Schema({
   },
 });
 
-const OrderSchema = new mongoose.Schema({
-  shippingFee: {
-    type: Number,
-    required: true,
+const OrderSchema = mongoose.Schema(
+  {
+    shippingFee: {
+      type: Number,
+      required: true,
+    },
+    orderItems: {
+      type: Array,
+      required: true,
+    },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+    },
+    subtotal: {
+      type: Number,
+      required: true,
+    },
+    total: {
+      type: Number,
+      required: true,
+    },
+    tax: {
+      type: Number,
+      required: true,
+    },
   },
-  orderItems: [singleOrderSchema],
-  user: {
-    type: mongoose.Schema.ObjectId,
-    ref: "User",
-  },
-  subtotal: {
-    type: Number,
-    required: true,
-  },
-  total: {
-    type: Number,
-    required: true,
-  },
-  tax: {
-    type: Number,
-    required: true,
-  },
-});
+  { timestamps: true }
+);
 
 module.exports = mongoose.model("Order", OrderSchema);
