@@ -1,0 +1,86 @@
+:root {
+  --navy-blue: rgb(24, 24, 39);
+}
+.header-conatiner {
+  background-color: var(--navy-blue);
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0;
+}
+.input-box {
+  display: flex;
+}
+.input-box input {
+  width: 480px;
+  height: 40px;
+  border: none;
+  padding-left: 10px;
+}
+.search-input:focus {
+  outline: none;
+}
+.select-class {
+  width: 50px;
+  height: 40px;
+  background-color: #e6e4e4;
+  border: none;
+  border-left: 1px #e6e4e4 solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.search-btn {
+  background-color: orange;
+  width: 40px;
+  color: var(--navy-blue);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+button {
+  color: white;
+  background-color: var(--navy-blue);
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+.deliver-location {
+  width: 80px;
+}
+.cart-btn {
+  width: 40px;
+  display: flex;
+  padding-top: 5px;
+}
+.cart-btn svg {
+  width: 30px;
+  height: 30px;
+}
+.cart-item-number {
+  z-index: 5;
+  background-color: orange;
+  width: 28px;
+  height: 20px;
+  border-radius: 50%;
+}
+.cart-item-number p {
+  text-align: center;
+  padding-top: 3px;
+  font-weight: bold;
+  color: var(--navy-blue);
+}
+.language-btn {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.language-btn p {
+  margin-top: 2px;
+}
+.language-btn svg {
+  width: 30px;
+  height: 20px;
+}

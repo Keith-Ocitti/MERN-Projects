@@ -17,7 +17,6 @@ const ProductSchema = new mongoose.Schema(
     },
     quantity: {
       type: Number,
-      required: [true, "Please provide product quantity"],
     },
     rating: {
       type: Number,
